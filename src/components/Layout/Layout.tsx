@@ -1,11 +1,20 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 
-import { Navigation, Options } from "~/components";
+import { Loader, Navigation, Options } from "~/components";
+import {
+  StyledLogoImg,
+  StyledContent,
+  StyledLogo,
+  StyledLogoLink,
+  StyledSideBar,
+  StyledWrapper,
+} from "./styled";
 
-import { StyledLogoImg, StyledContent, StyledLogo, StyledLogoLink, StyledSideBar, StyledWrapper } from "./styled";
+const Tracks: React.LazyExoticComponent<React.FC> = lazy(
+  () => import("~/components/Tracks")
+);
 
-const Layout: React.FC = () =>
-
+const Layout: React.FC = () => (
   <StyledWrapper>
     <StyledSideBar>
       <StyledLogo>
@@ -19,8 +28,9 @@ const Layout: React.FC = () =>
     </StyledSideBar>
 
     <StyledContent>
-      jkbgetbjgktrb
+      <Tracks />
     </StyledContent>
-  </StyledWrapper>;
+  </StyledWrapper>
+);
 
 export { Layout };
