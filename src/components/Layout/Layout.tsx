@@ -28,7 +28,9 @@ const Layout: React.FC = () => (
     </StyledSideBar>
 
     <StyledContent>
-      <Tracks />
+      <Suspense fallback={<Loader />}>
+        <Tracks />
+      </Suspense>
     </StyledContent>
   </StyledWrapper>
 );
