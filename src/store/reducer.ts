@@ -1,6 +1,7 @@
 import React from "react";
 
-import { TAction, TActionTypes, TStore, TTrack } from "./types";
+import { TTrack } from "~/components/Tracks/Item/types";
+import { TAction, TActionTypes, TStore } from "./types";
 
 const reducer: React.Reducer<TStore, ReturnType<TAction>> = (
   store,

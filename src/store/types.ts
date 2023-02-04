@@ -1,14 +1,10 @@
 import React from "react";
 
+import { TTrack } from "~/components/Tracks/Item/types";
+
 export enum TActionTypes {
   DEFAULT = "DEFAULT",
   SET_TRACKS = "SET_TRACKS",
-}
-
-export interface TTrack {
-  artist: string;
-  id: string;
-  title: string;
 }
 
 export interface TStore {
