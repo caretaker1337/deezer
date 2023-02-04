@@ -8,7 +8,7 @@ export const StyledWrapper = styled("li")(({ theme: { colors, rem } }) => ({
   height: rem(24),
   marginBottom: rem(16),
   cursor: "pointer",
-  transition: "color 0.2s ease-in",
+  transition: "color 0.1s ease-in",
 
   ":hover": {
     color: colors.red,

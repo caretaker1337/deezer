@@ -6,19 +6,19 @@ import { StyledList, StyledWrapper } from "./styled";
 
 const items: TOptItem[] = [
   {
-    text: "Music",
+    text: "Favourites",
+  },
+  {
+    text: "Playlists",
+  },
+  {
+    text: "Albums",
+  },
+  {
+    text: "Artists",
   },
   {
     text: "Podcasts",
-  },
-  {
-    text: "Explore",
-  },
-  {
-    text: "Favourites",
-  },
-  {
-    text: "Favourites",
   },
 ];
 
