@@ -1,5 +1,5 @@
 {
-  "description": "Some project description",
+  "description": "Music - React + TS + Styled, using store => useContext",
   "dependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -27,7 +27,7 @@
     "webpack-dev-server": "4.11.1"
   },
   "license": "UNLICENSED",
-  "name": "blank",
+  "name": "music",
   "private": true,
   "scripts": {
     "build": "webpack --config ./config/production.ts",
