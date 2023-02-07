@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from "react";
 
-import { Loader, Navigation, Options } from "~/components";
+import { Loader, Navigation, Options, Header } from "~/components";
 import {
   StyledLogoImg,
   StyledContent,
@@ -29,6 +29,7 @@ const Layout: React.FC = () => (
 
     <StyledContent>
       <Suspense fallback={<Loader />}>
+        <Header />
         <Tracks />
       </Suspense>
     </StyledContent>
