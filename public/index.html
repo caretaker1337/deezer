@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <base href="/">
     <meta charset="utf-8">
     <meta
       content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width"
       name="viewport"
     >
-    <title>Music</title>
+    <title>Deezer - Main Page</title>
     <link href="favicon.ico" rel="shortcut icon">
     <style>
       @font-face {
@@ -14,10 +15,18 @@
         font-weight: 400;
         src: url("fonts/Roboto-Regular.ttf");
       }
+
       @font-face {
-        font-family: "RobotoBold";
+        font-family: "Roboto";
         font-weight: 700;
         src: url("fonts/Roboto-Bold.ttf");
+      }
+
+      body {
+        -webkit-font-smoothing: antialiased;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        margin: 0;
       }
     </style>
   </head>
@@ -28,6 +37,14 @@
     </noscript>
 
     <div id="root"></div>
+    <div id="dz-root"></div>
+    <script src="https://e-cdn-files.dzcdn.net/js/min/dz.js"></script>
+    <script>
+      DZ.init({
+        appId: "583204",
+        channelUrl: "http://localhost:1337/channel.html",
+      });
+    </script>
     <script src="js/bundle.js"></script>
   </body>
 </html>

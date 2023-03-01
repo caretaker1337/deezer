@@ -3,25 +3,32 @@ import React from "react";
 import { SvgBarsIcon, SvgHeartIcon, SvgMicIcon, SvgMusicIcon } from "~/icons";
 import { Item } from "./Item";
 import { TNavItem } from "./Item/types";
-
 import { StyledList, StyledWrapper } from "./styled";
 
 const items: TNavItem[] = [
   {
-    text: "Music",
+    href: "/",
     icon: <SvgMusicIcon />,
+    id: "music-menu-item",
+    text: "Music",
   },
   {
-    text: "Podcasts",
+    href: "/podcasts",
     icon: <SvgMicIcon />,
+    id: "podscasts-menu-item",
+    text: "Podcasts",
   },
   {
-    text: "Explore",
+    href: "/explore",
     icon: <SvgBarsIcon />,
+    id: "explore-menu-item",
+    text: "Explore",
   },
   {
-    text: "Favourites",
+    href: "/favourites",
     icon: <SvgHeartIcon />,
+    id: "favourites-menu-item",
+    text: "Favourites",
   },
 ];
 
@@ -30,8 +37,8 @@ const Navigation: React.FC = () => (
     {items && !!items.length && (
       <StyledList>
         {items.map(
-          ({ text, icon }: TNavItem, index: number): React.ReactElement => (
-            <Item key={`nav-item-${index}`} text={text} icon={icon} />
+          ({ id, ...rest }: TNavItem): React.ReactElement => (
+            <Item key={id} {...rest} />
           )
         )}
       </StyledList>

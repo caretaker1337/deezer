@@ -13,6 +13,20 @@ const theme: DefaultTheme = {
   colors,
   devices,
   fonts,
+  placeholder: (css) => ({
+    "::-webkit-input-placeholder": {
+      ...css,
+    },
+    "::-moz-placeholder": {
+      ...css,
+    },
+    ":-moz-placeholder": {
+      ...css,
+    },
+    ":-ms-input-placeholder": {
+      ...css,
+    },
+  }),
   rem: (px) => {
     const baseFontSize = fonts.initialFontSize;
 

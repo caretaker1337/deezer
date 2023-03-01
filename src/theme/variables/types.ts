@@ -1,8 +1,13 @@
 export interface TColors {
-  gray: string;
   black: string;
-  red: string;
+  gray: string;
+  grayDarker: string;
   grayLighter: string;
+  grayLightest: string;
+  red: string;
+  redDarker: string;
+  whiteDarker: string;
+  whiteDarkest: string;
 }
 
 export interface TDevices {

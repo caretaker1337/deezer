@@ -13,6 +13,10 @@ const production: Configuration = {
     ...options.optimization,
     minimize: true,
   },
+  output: {
+    ...options.output,
+    publicPath: "https://deezer-zeta.vercel.app/",
+  },
   plugins: [
     ...options.plugins!,
     new CleanWebpackPlugin({

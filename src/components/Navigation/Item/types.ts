@@ -1,8 +1,10 @@
 import React from "react";
 
 export interface TNavItem {
-  text: string;
+  href: string;
   icon: React.ReactElement;
+  id: string;
+  text: string;
 }
 
-export type TProps = TNavItem;
+export type TProps = Omit<TNavItem, "id">;

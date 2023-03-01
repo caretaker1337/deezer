@@ -1,10 +1,15 @@
 import { TColors } from "./types";
 
 const colors: TColors = {
-  gray: "#191922",
   black: "#121216",
+  gray: "#191922",
+  grayDarker: "#121216",
+  grayLighter: "#a69da9",
+  grayLightest: "#32323d",
   red: "#ef5466",
-  grayLighter: "#A69DA9",
+  redDarker: "#db343d",
+  whiteDarker: "#a2a2ad",
+  whiteDarkest: "#42424c",
 };
 
 export { colors };

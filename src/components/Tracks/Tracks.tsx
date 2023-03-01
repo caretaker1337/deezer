@@ -1,7 +1,13 @@
 import React from "react";
 
-const Tracks: React.FC = () =>
+import { List } from "./List";
+import { StyledTitle } from "./styled";
 
-<div>Tracks</div>;
+const Tracks: React.FC = () => (
+  <>
+    <StyledTitle>Tracks</StyledTitle>
+    <List />
+  </>
+);
 
 export { Tracks };

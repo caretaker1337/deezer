@@ -1,36 +1,47 @@
-import React from "react";
-import { SvgNotificationIcon } from "~/icons";
+import React, { useContext } from "react";
 
+import { AppContext } from "~/store";
+import { SvgHeartFilledIcon, SvgNotificationIcon } from "~/icons";
+import { Search } from "./Search";
 import {
-  StyledItem,
-  StyledItemImg,
-  StyledList,
-  StyledTopBar,
-  StyledUser,
   StyledWrapper,
+  StyledToolbar,
+  StyledNotification,
+  StyledUser,
+  StyledFavourites,
 } from "./styled";
 
-const Header: React.FC = () => (
-  <StyledWrapper>
-    <StyledTopBar>
-      <StyledList>
-        <StyledItem>
+const Header: React.FC = () => {
+  const {
+    store: { favourites },
+  } = useContext(AppContext);
+
+  const checkFavouritesAdded: boolean = favourites && !!favourites.length;
+
+  return (
+    <StyledWrapper>
+      <Search />
+
+      <StyledToolbar>
+        {checkFavouritesAdded && (
+          <StyledFavourites
+            data-count={checkFavouritesAdded ? favourites["length"] : ""}
+            to="/favourites"
+          >
+            <SvgHeartFilledIcon />
+          </StyledFavourites>
+        )}
+
+        <StyledNotification type="button">
           <SvgNotificationIcon />
-        </StyledItem>
+        </StyledNotification>
 
-        <StyledItem>
-          <StyledItemImg>
-            <img
-              src="https://e-cdns-images.dzcdn.net/images/user/ed6b02e11f7e832f3810114bf55390c1/32x32-000000-80-0-0.jpg"
-              alt="krol"
-            />
-          </StyledItemImg>
-        </StyledItem>
-      </StyledList>
-    </StyledTopBar>
-
-    <StyledUser>s</StyledUser>
-  </StyledWrapper>
-);
+        <StyledUser href="#">
+          <img alt="User" src="images/user_img.jpg" />
+        </StyledUser>
+      </StyledToolbar>
+    </StyledWrapper>
+  );
+};
 
 export { Header };

@@ -1,39 +1,43 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
+import { useOutlet } from "react-router-dom";
 
-import { Loader, Navigation, Options, Header } from "~/components";
+import { Account, Header, Navigation } from "~/components";
 import {
   StyledLogoImg,
   StyledContent,
   StyledLogo,
   StyledLogoLink,
-  StyledSideBar,
+  StyledSidebar,
   StyledWrapper,
+  StyledLayout,
+  StyledPage,
 } from "./styled";
 
-const Tracks: React.LazyExoticComponent<React.FC> = lazy(
-  () => import("~/components/Tracks")
-);
+const Layout: React.FC = () => {
+  const outlet = useOutlet();
 
-const Layout: React.FC = () => (
-  <StyledWrapper>
-    <StyledSideBar>
-      <StyledLogo>
-        <StyledLogoLink href="/">
-          <StyledLogoImg src="images/logo_img.png" alt="logo_img" />
-        </StyledLogoLink>
-      </StyledLogo>
+  return (
+    <StyledWrapper>
+      <StyledSidebar>
+        <StyledLogo>
+          <StyledLogoLink to="/">
+            <StyledLogoImg src="images/logo_img.png" alt="Logo." />
+          </StyledLogoLink>
+        </StyledLogo>
 
-      <Navigation />
-      <Options />
-    </StyledSideBar>
+        <Navigation />
+      </StyledSidebar>
 
-    <StyledContent>
-      <Suspense fallback={<Loader />}>
+      <StyledContent>
         <Header />
-        <Tracks />
-      </Suspense>
-    </StyledContent>
-  </StyledWrapper>
-);
+
+        <StyledLayout>
+          <Account />
+          <StyledPage>{outlet}</StyledPage>
+        </StyledLayout>
+      </StyledContent>
+    </StyledWrapper>
+  );
+};
 
 export { Layout };

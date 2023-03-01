@@ -17,7 +17,6 @@ const development: Configuration = {
     compress: true,
     historyApiFallback: true,
     hot: true,
-    host: "local-ip",
     open: true,
     liveReload: false,
     port: 1337,
@@ -33,6 +32,10 @@ const development: Configuration = {
   optimization: {
     ...options.optimization,
     minimize: false,
+  },
+  output: {
+    ...options.output,
+    publicPath: "http://localhost:1337/",
   },
   plugins: [
     ...options.plugins!,

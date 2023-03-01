@@ -1,7 +1,11 @@
-export { SvgMusicIcon } from "./SvgMusicIcon";
-export { SvgMicIcon } from "./SvgMicIcon";
 export { SvgBarsIcon } from "./SvgBarsIcon";
+export { SvgCloseIcon } from "./SvgCloseIcon";
 export { SvgHeartIcon } from "./SvgHeartIcon";
-export { SvgReturnIcon } from "./SvgReturnIcon";
-export { SvgPlayIcon } from "./SvgPlayIcon";
+export { SvgHeartFilledIcon } from "./SvgHeartFilledIcon";
+export { SvgMicIcon } from "./SvgMicIcon";
+export { SvgMusicIcon } from "./SvgMusicIcon";
 export { SvgNotificationIcon } from "./SvgNotificationIcon";
+export { SvgPauseIcon } from "./SvgPauseIcon";
+export { SvgPlayIcon } from "./SvgPlayIcon";
+export { SvgReturnIcon } from "./SvgReturnIcon";
+export { SvgSearchIcon } from "./SvgSearchIcon";

@@ -5,10 +5,15 @@ declare module "styled-components" {
     (px: P): string;
   }
 
+  interface TPlaceholder {
+    (css: CSSObject): CSSObject;
+  }
+
   export interface DefaultTheme {
     colors: TColors;
     devices: TDevices;
     fonts: TFonts;
+    placeholder: TPlaceholder;
     rem: TRem;
   }
 }

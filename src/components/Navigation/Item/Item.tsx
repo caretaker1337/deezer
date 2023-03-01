@@ -1,19 +1,17 @@
 import React from "react";
 
 import { TProps } from "./types";
+import { StyledIcon, StyledText, StyledWrapper, StyledLink } from "./styled";
 
-import { StyledIcon, StyledText, StyledWrapper } from "./styled";
-
-const Item: React.FC<TProps>= ({ text, icon }) =>
-
+const Item: React.FC<TProps> = ({ href, text, icon }) => (
   <StyledWrapper>
-    <StyledIcon>
-      {icon}
-    </StyledIcon>
-
-    <StyledText>
-      {text}
-    </StyledText>
-  </StyledWrapper>;
+    <StyledLink
+      to={href}
+    >
+      <StyledIcon>{icon}</StyledIcon>
+      <StyledText>{text}</StyledText>
+    </StyledLink>
+  </StyledWrapper>
+);
 
 export { Item };

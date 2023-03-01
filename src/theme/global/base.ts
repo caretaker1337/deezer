@@ -13,12 +13,6 @@ const base = css(({ theme: { fonts } }) => ({
     fontSize: `${fonts.initialFontSize}px`,
   },
 
-  body: {
-    WebkitFontSmoothing: "antialiased",
-    fontFamily: "Roboto",
-    margin: 0,
-  },
-
   svg: {
     height: "100%",
     width: "100%",
